@@ -12,9 +12,7 @@ numProc is the total number of nodes, numAlive is the number of nodes that are a
 # bully leader election algorithm
 
 In BLE algorithm, multiple nodes can start the leader election protocol simultaneously. When a node realizes that the leader is unavailable, it multicasts
-a LEADER message to all nodes with higher IDs. If the receiver is online, it responds with a RESP message. Therefore, if the initiator receives a response, it understands that a node with a higher ID is alive and it becomes passive listener. 
-
-When a node receives a LEADER message, it also multicasts another LEADER message to nodes with higher IDS. Similar to the initiator, if it receives a response, it understands that a node with higher ID is alive. Otherwise, it understands that it is the node with highest ID2 and it broadcasts a TERMINATE message with its own ID. When other nodes receive the TERMINATE message, they learn the new message and they finalize the protocol. 
+a LEADER message to all nodes with higher IDs. If the receiver is online, it responds with a RESP message. Therefore, if the initiator receives a response, it understands that a node with a higher ID is alive and it becomes passive listener. When a node receives a LEADER message, it also multicasts another LEADER message to nodes with higher IDS. Similar to the initiator, if it receives a response, it understands that a node with higher ID is alive. Otherwise, it understands that it is the node with highest ID2 and it broadcasts a TERMINATE message with its own ID. When other nodes receive the TERMINATE message, they learn the new message and they finalize the protocol. 
 
 # specifications
 
