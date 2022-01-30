@@ -6,7 +6,7 @@ Bully leader election algorithm implementation for distributed systems.
 
 numProc is the total number of nodes, numAlive is the number of nodes that are alive - online and numStarters are the number of nodes that will initiate the protocol. Timeout is determined as num_proc + 10 seconds experimentally. After broadcast message you should wait some time in accordance with number of processes due to handling terminate messages, but eventually the program terminates.
 
-    python bully.py numProc numProc, numStarters
+    python bully.py numProc numProc numStarters
 
 
 # bully leader election algorithm
